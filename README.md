@@ -24,3 +24,5 @@ Este projeto apresenta uma suíte de testes automatizados de ponta a ponta (E2E)
 1. Instale as dependências: `npm install`
 2. Instale os browsers: `npx playwright install`
 3. Execute os testes: `npx playwright test --headed`
+
+⚠️ Nota Arquitetural: Os cenários de exceção que dependem de validação no Back-end (como Criação de Conta e Log In) não foram automatizados via UI. Isso foi uma decisão intencional devido às restrições de WAF e reCAPTCHA do ambiente de Produção da Shopify. Em um fluxo de trabalho real, esses cenários são validados em ambiente de Staging com as devidas permissões de bypass ou a nível de integração (API).
